@@ -1,0 +1,58 @@
+Sequential Nw
+Dense - create neuron/node
+activation function - sigmoid,softmax
+optimizer - updating the weight
+loss function
+metrics -  accuracy mse mac
+docs
+
+Create Venv with requirments.txt 
+activate venv
+
+
+Load all the libraries in exp file
+	-sklearn modelselection
+	-pandas
+	-standard scalar, label encoder
+
+load the data set
+	-eliminate the non important features
+	-label encoding on gender
+	-One hot encoding on geography
+	-Add encoded value in data
+	-Save pickle file of encoding
+
+Prepare the train and testing data
+	- using skitlear's train test split do xtrain xtest ytrain ytest
+	- scaling the feature using standard scaler's fit_tranform on X data
+	- save pickle file of scaling
+
+Prepare the Model
+	- Import lib
+	- sequential model with dense as layers 
+	- add optimizer's learning rate and loss using binary cross entropy
+	- Compile the model using optimizer,loss,mertrics as accuracy
+
+Setup tensorboard (To Get a good view)
+	- setup log file
+	- callback with histogram and log file
+	- Setup early stopping with monitoring val_loss with patience as 10 epochs and restoring the best weights
+
+Training the model
+	-model.fit with all datasets(xtrain xtest ytrain ytest),epochs and callbacks
+	-Save the model
+	-Load Tensorboard Extension
+
+Check the model
+	- In new file Load the model,encoder and scaler
+	- Add input data , perform label encoding on gender and One hot encoding on geography and scaling on entire data to get it in model's format
+	- Run Model on new data
+
+Make app using Streamlit
+	- load all the model,encoder,scaler
+	- take user input of all col using streamlit
+	- add that to a var
+	- perform  label encoding on gender and One hot encoding on geography and scaling on entire data to get it in model's format
+	- Run Model on new data
+
+
